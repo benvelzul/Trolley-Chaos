@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cdsroknv42qdw"]
+
+[ext_resource type="Script" uid="uid://bks3daqw8fiey" path="res://src/entities/dog/dog.gd" id="1_ualuw"]
+[ext_resource type="Texture2D" uid="uid://d2q14p2gah1mo" path="res://assets/dog/dog_2.png" id="2_81urx"]
+[ext_resource type="Texture2D" uid="uid://cgnxd1bmx003" path="res://assets/dog/dog_0.png" id="3_lq5ci"]
+[ext_resource type="Texture2D" uid="uid://bddb3id25puxd" path="res://assets/dog/dog_1.png" id="4_c52ji"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivfor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_81urx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lq5ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c52ji")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Dog" type="CharacterBody2D" unique_id=664273040]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_ualuw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1564283026]
+rotation = 1.5707964
+polygon = PackedVector2Array(0, 72, 16, 40, 16, -24, 24, -48, 0, -72, -24, -48, -16, -24, -16, 40)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=716274940]
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_ivfor")
+animation = &"walk"

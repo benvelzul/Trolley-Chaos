@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://xoep23q7ltoa"]
+
+[ext_resource type="Texture2D" uid="uid://c1fp7gtgb4ft2" path="res://assets/trolley/trolley0.png" id="1_bixrx"]
+[ext_resource type="Script" uid="uid://dose4jgnnr8gy" path="res://src/entities/player/player.gd" id="1_bx36l"]
+[ext_resource type="Texture2D" uid="uid://cgc64hcnesa4y" path="res://assets/trolley/trolley1.png" id="2_28f51"]
+[ext_resource type="Texture2D" uid="uid://dy4h6sevdlv1y" path="res://assets/trolley/trolley2.png" id="3_iqo45"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mjxaa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bixrx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_28f51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iqo45")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1638047874]
+disable_mode = 2
+motion_mode = 1
+script = ExtResource("1_bx36l")
+Max_speed = 500.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1183539205]
+rotation = -1.5707964
+polygon = PackedVector2Array(-63.999992, -152, 64.00001, -152, 71.99999, 144, -9.44166e-06, 216, -72.00001, 144)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2030626444]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2122658661]
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_mjxaa")
+animation = &"idle"
