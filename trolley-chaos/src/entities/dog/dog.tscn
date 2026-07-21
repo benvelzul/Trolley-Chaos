@@ -27,6 +27,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ualuw"]
+radius = 662.8571
+
 [node name="Dog" type="CharacterBody2D" unique_id=664273040]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_ualuw")
@@ -39,3 +42,29 @@ polygon = PackedVector2Array(0, 72, 16, 40, 16, -24, 24, -48, 0, -72, -24, -48, 
 rotation = 1.5707964
 sprite_frames = SubResource("SpriteFrames_ivfor")
 animation = &"walk"
+
+[node name="VisionArea" type="Area2D" parent="." unique_id=308437123]
+position = Vector2(57.14286, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArea" unique_id=272808998]
+light_mask = 3
+visibility_layer = 2
+position = Vector2(-57.142853, 0)
+shape = SubResource("CircleShape2D_ualuw")
+
+[node name="LineOfSight" type="RayCast2D" parent="." unique_id=528806387]
+scale = Vector2(0.99999994, 0.99999994)
+enabled = false
+collision_mask = 3
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1307543372]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox" unique_id=1218662330]
+polygon = PackedVector2Array(-45.714283, 22.857141, 45.714283, 22.857141, 79.99999, 0, 45.714283, -22.857141, -45.714283, -22.857141, -57.142853, 0)
+
+[connection signal="body_entered" from="VisionArea" to="." method="_on_vision_area_body_entered"]
+[connection signal="body_exited" from="VisionArea" to="." method="_on_vision_area_body_exited"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
