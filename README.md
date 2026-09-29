@@ -7,5 +7,5 @@ So the idea of the game came when i was in an ALDI and then I thought it would b
 
 * You aim with the mouse point and you have to like go behind the trolley to push it 
 
-* You have to avoid obstacles (in a parking lot), and maybe some cars that are going around. 
+* You have to avoid obstacles (in a parking lot), and maybe some cars that are going around (future idea). 
 
