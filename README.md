@@ -6,11 +6,8 @@ The idea came from one time i was just pushing a cart around in ALDI and i thoug
 
 ## Enemies
 
-<<<<<<< Updated upstream
 * You have to avoid obstacles (in a parking lot), and maybe some cars that are going around (future idea). 
-=======
 The enemies i have implemented so far:
->>>>>>> Stashed changes
 
 - dog: chases u around and u die if it hits u 
 
