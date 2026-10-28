@@ -18,7 +18,7 @@ func _on_spawn_timer_timeout() -> void:
 	# 2. Instance the enemy scene into memory
 	var enemy_instance = enemy_scene.instantiate()
 	
-	var random_offset = Vector2(randf_range(-200, 200), randf_range(-200, 200))
+	var random_offset = Vector2(randf_range(-600, 600), randf_range(-200, 200))
 	enemy_instance.global_position = global_position + random_offset
 
 	spawn_timer.wait_time = randf_range(20, 50)

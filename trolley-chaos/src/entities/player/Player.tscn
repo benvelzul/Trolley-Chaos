@@ -28,27 +28,33 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1638047874 groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1638047874 groups=["Player"]]
 disable_mode = 2
-collision_layer = 3
 collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_bx36l")
 Max_speed = 500.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1183539205]
+position = Vector2(76.55035, 29.344318)
 rotation = -1.5707964
+scale = Vector2(0.745275, 0.76547074)
 polygon = PackedVector2Array(-63.999992, -152, 64.00001, -152, 71.99999, 144, -9.44166e-06, 216, -72.00001, 144)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2030626444]
+zoom = Vector2(0.7, 0.7)
 script = ExtResource("2_lvau8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2122658661]
+position = Vector2(80, 32)
 rotation = -1.5707964
+scale = Vector2(0.70398986, 0.71879053)
 sprite_frames = SubResource("SpriteFrames_mjxaa")
 animation = &"idle"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=811093229 groups=["PlayerHitbox"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox" unique_id=2013756197]
-polygon = PackedVector2Array(104, -88, 104, 104, 160, 80, 216, 40, 216, -32, 152, -80)
+position = Vector2(96.00001, 40)
+scale = Vector2(0.5816327, 0.6988119)
+polygon = PackedVector2Array(117.754395, -99.448, 117.754395, 92.552, 173.7544, 68.552, 229.7544, 28.551998, 229.7544, -43.448, 165.7544, -91.448)

@@ -5,34 +5,42 @@
 [ext_resource type="Texture2D" uid="uid://cvfv3v2ir1q7i" path="res://assets/title/CHAOS.png" id="2_yipxn"]
 [ext_resource type="Texture2D" uid="uid://cq5pn42xkdqkt" path="res://assets/title/New Piskel (4).png" id="3_mxqo5"]
 [ext_resource type="Texture2D" uid="uid://ccfoqmxi5knp" path="res://assets/title/New Piskel (3).png" id="4_wdmux"]
-[ext_resource type="Texture2D" uid="uid://8vg8j1jc2ly" path="res://assets/start_animation/character_title_0.png" id="5_4fdh4"]
+[ext_resource type="Texture2D" uid="uid://dxpiklsliuxl7" path="res://assets/title/play.png" id="6_0prml"]
 [ext_resource type="Texture2D" uid="uid://bclrqrp1yxk2q" path="res://assets/start_animation/character_title_1.png" id="6_kabri"]
 [ext_resource type="Texture2D" uid="uid://dgyyrfl5rpdk2" path="res://assets/start_animation/character_title_2.png" id="7_rbrv2"]
 [ext_resource type="Texture2D" uid="uid://b2gjaqcuxpxt4" path="res://assets/start_animation/character_title_4.png" id="8_fnoj8"]
 [ext_resource type="Texture2D" uid="uid://ls8t2pwh4pem" path="res://assets/start_animation/character_title_3.png" id="9_e8782"]
-[ext_resource type="Texture2D" uid="uid://d0uv2qv60wcor" path="res://assets/start_animation/character_title_6.png" id="10_ce4te"]
 [ext_resource type="Texture2D" uid="uid://tmcuu2w2hph1" path="res://assets/title/New Piskel.png" id="13_mxqo5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gwglq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_4fdh4")
+"texture": ExtResource("9_e8782")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_kabri")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rbrv2")
+"texture": ExtResource("8_fnoj8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_fnoj8")
+"texture": ExtResource("7_rbrv2")
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_e8782")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_ce4te")
+"texture": ExtResource("6_kabri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fnoj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rbrv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_e8782")
 }],
 "loop": true,
 "name": &"start",
@@ -50,8 +58,9 @@ script = ExtResource("1_yipxn")
 
 [node name="Background" type="TextureRect" parent="." unique_id=685018618]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("4_wdmux")
 
 [node name="TrolleyTitle" type="TextureRect" parent="." unique_id=1733949853]
 layout_mode = 1
@@ -94,11 +103,11 @@ offset_bottom = 448.0
 
 [node name="PlayButton" type="Button" parent="." unique_id=190024985]
 layout_mode = 0
-offset_left = 480.0
+offset_left = 488.0
 offset_top = 312.0
 offset_right = 672.0
-offset_bottom = 392.0
-icon = ExtResource("4_wdmux")
+offset_bottom = 416.0
+icon = ExtResource("6_0prml")
 flat = true
 expand_icon = true
 
@@ -118,3 +127,11 @@ icon = ExtResource("13_mxqo5")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="Label" type="Label" parent="." unique_id=1616845173]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 608.0
+offset_right = 190.0
+offset_bottom = 631.0
+text = "MADE BY: BENVELZUL"
